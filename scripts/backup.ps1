@@ -2,22 +2,32 @@ $configPath = "config/backup-config.json"
 
 $config = Get-Content $configPath | ConvertFrom-Json
 
-Write-Host "Source : $($config.source)"
-Write-Host "Destination : $($config.destination)"
-
 $robocopyPath = "C:\Windows\System32\Robocopy.exe"
-
 $logPath = "C:\Logs\Sauvegarde\backup.log"
 
-& $robocopyPath $config.source $config.destination /E /R:3 /W:5 /TEE /LOG:$logPath
+$hasError = $false
 
-$exitCode = $LASTEXITCODE
+foreach ($job in $config.jobs) {
+    Write-Host "Sauvegarde : $($job.name)"
+    Write-Host "Source : $($job.source)"
+    Write-Host "Destination : $($job.destination)"
 
-if ($exitCode -ge 8) {
-    Write-Host "Erreur pendant la sauvegarde. Code Robocopy : $exitCode"
+    & $robocopyPath $job.source $job.destination /E /R:3 /W:5 /TEE /LOG+:$logPath
+
+    $exitCode = $LASTEXITCODE
+
+    if ($exitCode -ge 8) {
+        Write-Host "Erreur pendant la sauvegarde $($job.name). Code Robocopy : $exitCode"
+        $hasError = $true
+    }
+    else {
+        Write-Host "Sauvegarde $($job.name) terminee avec succes. Code Robocopy : $exitCode"
+    }
+}
+
+if ($hasError) {
     exit 1
 }
 else {
-    Write-Host "Sauvegarde terminee avec succes. Code Robocopy : $exitCode"
     exit 0
 }

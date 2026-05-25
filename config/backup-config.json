@@ -1,4 +1,19 @@
 {
-  "source": "C:\\Donnees\\RendezVous",
-  "destination": "\\\\VNSERV\\Backups\\RendezVous"
+  "jobs": [
+    {
+      "name": "RendezVous",
+      "source": "C:\\Donnees\\RendezVous",
+      "destination": "C:\\BackupTest\\RendezVous"
+    },
+    {
+      "name": "Patients",
+      "source": "C:\\Donnees\\Patients",
+      "destination": "C:\\BackupTest\\Patients"
+    },
+    {
+      "name": "Medecins",
+      "source": "C:\\Donnees\\Medecins",
+      "destination": "C:\\BackupTest\\Medecins"
+    }
+  ]
 }
