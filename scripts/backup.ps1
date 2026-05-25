@@ -1,4 +1,4 @@
-$configPath = "config/backup-config.json"
+$configPath = Join-Path $PSScriptRoot "..\config\backup-config.json"
 
 $config = Get-Content $configPath | ConvertFrom-Json
 
