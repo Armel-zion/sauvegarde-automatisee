@@ -7,4 +7,6 @@ Write-Host "Destination : $($config.destination)"
 
 $robocopyPath = "C:\Windows\System32\Robocopy.exe"
 
-& $robocopyPath $config.source $config.destination /E
+$logPath = "C:\Logs\Sauvegarde\backup.log"
+
+& $robocopyPath $config.source $config.destination /E /LOG:$logPath
