@@ -2,11 +2,11 @@
 
 ## Objectif du test
 
-Vérifier que les fichiers sauvegardés peuvent être restaurés dans un dossier de test sans écraser les données originales.
+Verifier que les fichiers sauvegardes peuvent etre restaures dans un dossier de test sans ecraser les donnees originales.
 
-## Données utilisées
+## Donnees utilisees
 
-Fichiers sauvegardés :
+Fichiers sauvegardes :
 
 - `rdv-test.txt`
 - `patient-test.txt`
@@ -14,7 +14,7 @@ Fichiers sauvegardés :
 
 ## Source de restauration
 
-Les fichiers sont restaurés depuis :
+Les fichiers sont restaures depuis :
 
 - `C:\BackupTest\RendezVous`
 - `C:\BackupTest\Patients`
@@ -22,13 +22,26 @@ Les fichiers sont restaurés depuis :
 
 ## Destination de restauration
 
-Les fichiers sont restaurés vers :
+Les fichiers sont restaures vers :
 
 - `C:\RestaurationTest\RendezVous`
 - `C:\RestaurationTest\Patients`
 - `C:\RestaurationTest\Medecins`
 
-## Commande exécutée
+## Commande executee
 
 ```powershell
 .\scripts\restore.ps1
+```
+
+## Resultat attendu
+
+Les fichiers doivent etre presents dans `C:\RestaurationTest`.
+
+## Resultat obtenu
+
+Les fichiers ont ete restaures avec succes dans le dossier de test.
+
+## Conclusion
+
+Le test de restauration est valide.

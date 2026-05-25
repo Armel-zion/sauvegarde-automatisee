@@ -1,10 +1,13 @@
-$configPath = "config/backup-config.json"
+$configPath = Join-Path $PSScriptRoot "..\config\backup-config.json"
 
 $config = Get-Content $configPath | ConvertFrom-Json
 
 $robocopyPath = "C:\Windows\System32\Robocopy.exe"
 $logPath = "C:\Logs\Sauvegarde\restore.log"
 $restoreRoot = "C:\RestaurationTest"
+$logDirectory = Split-Path $logPath -Parent
+
+New-Item -ItemType Directory -Path $logDirectory -Force | Out-Null
 
 $hasError = $false
 

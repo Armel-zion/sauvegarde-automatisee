@@ -7,7 +7,7 @@ $action = New-ScheduledTaskAction `
     -Argument "-NoProfile -NonInteractive -ExecutionPolicy Bypass -File `"$backupScriptPath`"" `
     -WorkingDirectory (Split-Path $PSScriptRoot -Parent)
 
-$trigger = New-ScheduledTaskTrigger -Daily -At 07:26
+$trigger = New-ScheduledTaskTrigger -Daily -At 20:00
 
 Register-ScheduledTask `
     -TaskName $taskName `

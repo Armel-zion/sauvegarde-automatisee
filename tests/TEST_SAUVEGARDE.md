@@ -2,9 +2,9 @@
 
 ## Objectif du test
 
-Vérifier que le script `backup.ps1` copie correctement plusieurs dossiers sources vers les dossiers de destination.
+Verifier que le script `backup.ps1` copie correctement plusieurs dossiers sources vers les dossiers de destination.
 
-## Configuration testée
+## Configuration testee
 
 Sources :
 
@@ -18,7 +18,24 @@ Destinations :
 - `C:\BackupTest\Patients`
 - `C:\BackupTest\Medecins`
 
-## Commande exécutée
+## Commande executee
 
 ```powershell
 .\scripts\backup.ps1
+```
+
+## Resultat attendu
+
+Les fichiers suivants doivent etre presents dans les dossiers de sauvegarde :
+
+- `C:\BackupTest\RendezVous\rdv-test.txt`
+- `C:\BackupTest\Patients\patient-test.txt`
+- `C:\BackupTest\Medecins\medecin-test.txt`
+
+## Resultat obtenu
+
+Les trois dossiers de test ont ete copies avec succes.
+
+## Conclusion
+
+Le test de sauvegarde locale est valide.

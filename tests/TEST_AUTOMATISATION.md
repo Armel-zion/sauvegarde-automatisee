@@ -2,11 +2,11 @@
 
 ## Objectif du test
 
-Vérifier que la tâche planifiée Windows peut lancer automatiquement le script `backup.ps1`.
+Verifier que la tache planifiee Windows peut lancer automatiquement le script `backup.ps1`.
 
-## Tâche planifiée
+## Tache planifiee
 
-Nom de la tâche :
+Nom de la tache :
 
 - `SauvegardeAutomatiqueProjet`
 
@@ -14,8 +14,24 @@ Nom de la tâche :
 
 ```powershell
 Start-ScheduledTask -TaskName "SauvegardeAutomatiqueProjet"
+```
 
-Vérification
-Commande utilisée :
+## Verification
 
+Commande utilisee :
+
+```powershell
 Get-ScheduledTaskInfo -TaskName "SauvegardeAutomatiqueProjet"
+```
+
+Resultat attendu :
+
+- `LastTaskResult : 0`
+
+## Resultat obtenu
+
+La tache planifiee a ete lancee avec succes apres correction de l'action et du chemin de configuration.
+
+## Conclusion
+
+Le test d'automatisation est valide si `LastTaskResult` vaut `0` et si le fichier `C:\Logs\Sauvegarde\backup.log` est mis a jour.

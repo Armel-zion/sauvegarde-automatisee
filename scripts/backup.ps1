@@ -4,6 +4,9 @@ $config = Get-Content $configPath | ConvertFrom-Json
 
 $robocopyPath = "C:\Windows\System32\Robocopy.exe"
 $logPath = "C:\Logs\Sauvegarde\backup.log"
+$logDirectory = Split-Path $logPath -Parent
+
+New-Item -ItemType Directory -Path $logDirectory -Force | Out-Null
 
 $hasError = $false
 
