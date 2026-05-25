@@ -9,4 +9,4 @@ $robocopyPath = "C:\Windows\System32\Robocopy.exe"
 
 $logPath = "C:\Logs\Sauvegarde\backup.log"
 
-& $robocopyPath $config.source $config.destination /E /LOG:$logPath
+& $robocopyPath $config.source $config.destination /E /R:3 /W:5 /TEE /LOG:$logPath
