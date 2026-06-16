@@ -20,4 +20,5 @@ Mettre en place une solution simple qui sauvegarde automatiquement les données 
 
 - [Documentation technique](DOCUMENTATION_TECHNIQUE.md)
 - [Validation des deux VM](VALIDATION_VM.md)
+- [Gestion des VM](VM_EXPORT.md)
 - [Présentation orale](PRESENTATION_ORALE.md)

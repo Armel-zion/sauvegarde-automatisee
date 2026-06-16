@@ -1,0 +1,20 @@
+# Fichiers de machines virtuelles VirtualBox / VMware / Hyper-V
+# Ces fichiers sont trop lourds pour GitHub et peuvent contenir des donnees sensibles.
+*.vdi
+*.vmdk
+*.vhd
+*.vhdx
+*.ova
+*.ovf
+*.vbox
+*.vbox-prev
+
+# Images ISO et exports locaux
+*.iso
+vm-export/
+exports-vm/
+VirtualBox VMs/
+
+# Fichiers temporaires Windows
+Thumbs.db
+Desktop.ini
