@@ -30,7 +30,7 @@ Resultat attendu :
 
 ## Resultat obtenu
 
-La tache planifiee a ete lancee avec succes apres correction de l'action et du chemin de configuration.
+La tache planifiee a ete lancee avec succes apres correction de l'action, du chemin de configuration et du partage reseau.
 
 ## Conclusion
 

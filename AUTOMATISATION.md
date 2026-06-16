@@ -61,3 +61,13 @@ Get-ScheduledTaskInfo -TaskName "SauvegardeAutomatiqueProjet"
 ```
 
 Un `LastTaskResult` egal a `0` indique que la tache s'est terminee correctement.
+
+## Validation finale
+
+La tache planifiee `SauvegardeAutomatiqueProjet` a ete testee apres la mise en place du partage reseau `\\192.168.50.20\Backups`.
+
+La sauvegarde automatisee est validee si :
+
+- le partage reseau est accessible ;
+- le fichier `C:\Logs\Sauvegarde\backup.log` est mis a jour ;
+- `LastTaskResult` vaut `0`.

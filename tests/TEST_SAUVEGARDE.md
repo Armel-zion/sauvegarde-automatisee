@@ -14,28 +14,28 @@ Sources :
 
 Destinations :
 
-- `C:\BackupTest\RendezVous`
-- `C:\BackupTest\Patients`
-- `C:\BackupTest\Medecins`
+- `\\192.168.50.20\Backups\RendezVous`
+- `\\192.168.50.20\Backups\Patients`
+- `\\192.168.50.20\Backups\Medecins`
 
 ## Commande executee
 
 ```powershell
-.\scripts\backup.ps1
+powershell.exe -ExecutionPolicy Bypass -File .\scripts\backup.ps1
 ```
 
 ## Resultat attendu
 
 Les fichiers suivants doivent etre presents dans les dossiers de sauvegarde :
 
-- `C:\BackupTest\RendezVous\rdv-test.txt`
-- `C:\BackupTest\Patients\patient-test.txt`
-- `C:\BackupTest\Medecins\medecin-test.txt`
+- `\\192.168.50.20\Backups\RendezVous\rdv-test.txt`
+- `\\192.168.50.20\Backups\Patients\patient-test.txt`
+- `\\192.168.50.20\Backups\Medecins\medecin-test.txt`
 
 ## Resultat obtenu
 
-Les trois dossiers de test ont ete copies avec succes.
+Les trois dossiers de test ont ete copies avec succes vers le serveur de sauvegarde.
 
 ## Conclusion
 
-Le test de sauvegarde locale est valide.
+Le test de sauvegarde vers le serveur distant est valide.

@@ -3,17 +3,17 @@
     {
       "name": "RendezVous",
       "source": "C:\\Donnees\\RendezVous",
-      "destination": "\\\\VNSERV\\Backups\\RendezVous"
+      "destination": "\\\\192.168.50.20\\Backups\\RendezVous"
     },
     {
       "name": "Patients",
       "source": "C:\\Donnees\\Patients",
-      "destination": "\\\\VNSERV\\Backups\\Patients"
+      "destination": "\\\\192.168.50.20\\Backups\\Patients"
     },
     {
       "name": "Medecins",
       "source": "C:\\Donnees\\Medecins",
-      "destination": "\\\\VNSERV\\Backups\\Medecins"
+      "destination": "\\\\192.168.50.20\\Backups\\Medecins"
     }
   ]
 }

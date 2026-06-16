@@ -16,9 +16,9 @@ Fichiers sauvegardes :
 
 Les fichiers sont restaures depuis :
 
-- `C:\BackupTest\RendezVous`
-- `C:\BackupTest\Patients`
-- `C:\BackupTest\Medecins`
+- `\\192.168.50.20\Backups\RendezVous`
+- `\\192.168.50.20\Backups\Patients`
+- `\\192.168.50.20\Backups\Medecins`
 
 ## Destination de restauration
 
@@ -31,7 +31,7 @@ Les fichiers sont restaures vers :
 ## Commande executee
 
 ```powershell
-.\scripts\restore.ps1
+powershell.exe -ExecutionPolicy Bypass -File .\scripts\restore.ps1
 ```
 
 ## Resultat attendu
@@ -40,7 +40,7 @@ Les fichiers doivent etre presents dans `C:\RestaurationTest`.
 
 ## Resultat obtenu
 
-Les fichiers ont ete restaures avec succes dans le dossier de test.
+Les fichiers ont ete restaures avec succes depuis le serveur distant vers le dossier de test.
 
 ## Conclusion
 
